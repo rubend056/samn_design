@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name samn_small-rescue)(type Legacy)(uri ${KIPRJMOD}/samn_small-rescue.lib)(options "")(descr ""))
+)

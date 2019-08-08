@@ -1,0 +1,36 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# Conn_02x03_Male_ICSP-common
+#
+DEF Conn_02x03_Male_ICSP-common J 0 40 N Y 1 F N
+F0 "J" 0 200 50 H V C CNN
+F1 "Conn_02x03_Male_ICSP-common" 0 -200 50 H V C CNN
+F2 "" 0 50 50 H I C CNN
+F3 "" 0 50 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??_*
+$ENDFPLIST
+DRAW
+S -84 -95 -50 -105 1 1 6 F
+S -84 5 -50 -5 1 1 6 F
+S -84 105 -50 95 1 1 6 F
+S 34 -45 0 -55 1 1 6 F
+S 34 55 0 45 1 1 6 F
+S 34 155 0 145 1 1 6 F
+P 2 1 1 6 -100 -100 -84 -100 N
+P 2 1 1 6 -100 0 -84 0 N
+P 2 1 1 6 -100 100 -84 100 N
+P 2 1 1 6 50 -50 34 -50 N
+P 2 1 1 6 50 50 34 50 N
+P 2 1 1 6 50 150 34 150 N
+X - 1 200 -50 150 L 50 50 1 1 P
+X Reset 2 -250 -100 150 R 50 50 1 1 P
+X MOSI 3 200 50 150 L 50 50 1 1 P
+X SCK 4 -250 0 150 R 50 50 1 1 P
+X + 5 200 150 150 L 50 50 1 1 P
+X MISO 6 -250 100 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library

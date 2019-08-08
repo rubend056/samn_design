@@ -1,0 +1,231 @@
+EESchema Schematic File Version 4
+LIBS:samn-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Regulator_Switching:MCP1640BCH U1
+U 1 1 5BD40B3E
+P 5750 3100
+F 0 "U1" H 5750 3567 50  0000 C CNN
+F 1 "MCP1640BCH" H 5750 3476 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6_Handsoldering" H 5800 2850 50  0001 L CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20002234D.pdf" H 5500 3550 50  0001 C CNN
+	1    5750 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5BD41927
+P 5750 3550
+F 0 "#PWR0101" H 5750 3300 50  0001 C CNN
+F 1 "GND" H 5755 3377 50  0000 C CNN
+F 2 "" H 5750 3550 50  0001 C CNN
+F 3 "" H 5750 3550 50  0001 C CNN
+	1    5750 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 3550 5750 3450
+$Comp
+L power:+1V5 #PWR0102
+U 1 1 5BD41F76
+P 4850 2900
+F 0 "#PWR0102" H 4850 2750 50  0001 C CNN
+F 1 "+1V5" H 4865 3073 50  0000 C CNN
+F 2 "" H 4850 2900 50  0001 C CNN
+F 3 "" H 4850 2900 50  0001 C CNN
+	1    4850 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 2900 5100 2900
+Wire Wire Line
+	5100 2900 5100 3100
+Wire Wire Line
+	5100 3100 5350 3100
+Connection ~ 5100 2900
+Wire Wire Line
+	5100 2900 5350 2900
+$Comp
+L Device:C_Small C1
+U 1 1 5BD42C4E
+P 5100 3350
+F 0 "C1" H 5192 3396 50  0000 L CNN
+F 1 "4.7uF" H 5192 3305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5100 3350 50  0001 C CNN
+F 3 "~" H 5100 3350 50  0001 C CNN
+	1    5100 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 3450 5750 3450
+Connection ~ 5750 3450
+Wire Wire Line
+	5750 3450 5750 3400
+Wire Wire Line
+	5100 3250 5100 3100
+Connection ~ 5100 3100
+$Comp
+L power:+3.3V #PWR0103
+U 1 1 5BD45AEA
+P 6550 3000
+F 0 "#PWR0103" H 6550 2850 50  0001 C CNN
+F 1 "+3.3V" H 6565 3173 50  0000 C CNN
+F 2 "" H 6550 3000 50  0001 C CNN
+F 3 "" H 6550 3000 50  0001 C CNN
+	1    6550 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5BD45B52
+P 6650 3300
+F 0 "C2" H 6558 3254 50  0000 R CNN
+F 1 "10uF" H 6558 3345 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6650 3300 50  0001 C CNN
+F 3 "~" H 6650 3300 50  0001 C CNN
+	1    6650 3300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6150 3000 6300 3000
+$Comp
+L Device:R_US R1
+U 1 1 5BD48D40
+P 6300 3150
+F 0 "R1" H 6368 3196 50  0000 L CNN
+F 1 "976k" H 6368 3105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6340 3140 50  0001 C CNN
+F 3 "~" H 6300 3150 50  0001 C CNN
+	1    6300 3150
+	1    0    0    -1  
+$EndComp
+Connection ~ 6300 3000
+Wire Wire Line
+	6300 3000 6550 3000
+Wire Wire Line
+	6150 3200 6150 3300
+Wire Wire Line
+	6150 3300 6300 3300
+$Comp
+L pspice:INDUCTOR L1
+U 1 1 5BD4B1D3
+P 5750 2500
+F 0 "L1" H 5750 2715 50  0000 C CNN
+F 1 "4.7uH" H 5750 2624 50  0000 C CNN
+F 2 "common:WE-LQS" H 5750 2500 50  0001 C CNN
+F 3 "~" H 5750 2500 50  0001 C CNN
+	1    5750 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 2900 6150 2500
+Wire Wire Line
+	6150 2500 6000 2500
+Wire Wire Line
+	5500 2500 5100 2500
+Wire Wire Line
+	5100 2500 5100 2900
+Wire Wire Line
+	6550 3000 6650 3000
+Connection ~ 6550 3000
+Wire Wire Line
+	6650 3400 6650 3450
+Wire Wire Line
+	6650 3200 6650 3000
+Text Notes 6450 2150 2    118  ~ 24
+Boost Converter
+$Comp
+L Connector_Generic:Conn_01x03 J1
+U 1 1 5BF1ACEE
+P 7950 2850
+F 0 "J1" H 8030 2892 50  0000 L CNN
+F 1 "Conn_01x03" H 8030 2801 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 7950 2850 50  0001 C CNN
+F 3 "~" H 7950 2850 50  0001 C CNN
+	1    7950 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5BF1B119
+P 7550 3100
+F 0 "#PWR0104" H 7550 2850 50  0001 C CNN
+F 1 "GND" H 7555 2927 50  0000 C CNN
+F 2 "" H 7550 3100 50  0001 C CNN
+F 3 "" H 7550 3100 50  0001 C CNN
+	1    7550 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+1V5 #PWR0105
+U 1 1 5BF1B1B5
+P 7550 2550
+F 0 "#PWR0105" H 7550 2400 50  0001 C CNN
+F 1 "+1V5" H 7565 2723 50  0000 C CNN
+F 2 "" H 7550 2550 50  0001 C CNN
+F 3 "" H 7550 2550 50  0001 C CNN
+	1    7550 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0106
+U 1 1 5BF1B3A0
+P 7400 2850
+F 0 "#PWR0106" H 7400 2700 50  0001 C CNN
+F 1 "+3.3V" H 7415 3023 50  0000 C CNN
+F 2 "" H 7400 2850 50  0001 C CNN
+F 3 "" H 7400 2850 50  0001 C CNN
+	1    7400 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 2850 7750 2850
+Wire Wire Line
+	7550 2550 7550 2750
+Wire Wire Line
+	7550 2750 7750 2750
+Wire Wire Line
+	7550 3100 7550 2950
+Wire Wire Line
+	7550 2950 7750 2950
+$Comp
+L Device:R_POT_US RV1
+U 1 1 5BF1C402
+P 6500 3700
+F 0 "RV1" H 6432 3746 50  0000 R CNN
+F 1 "500k" H 6432 3655 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3386F_Vertical" H 6500 3700 50  0001 C CNN
+F 3 "~" H 6500 3700 50  0001 C CNN
+	1    6500 3700
+	1    0    0    -1  
+$EndComp
+Text Notes 6950 3850 0    50   ~ 0
+576k for 3.3V\n
+Wire Wire Line
+	5750 3450 6050 3450
+Wire Wire Line
+	6300 3300 6300 3550
+Wire Wire Line
+	6300 3550 6500 3550
+Connection ~ 6300 3300
+Wire Wire Line
+	6500 3850 6050 3850
+Wire Wire Line
+	6050 3850 6050 3450
+Connection ~ 6050 3450
+Wire Wire Line
+	6050 3450 6650 3450
+$EndSCHEMATC
