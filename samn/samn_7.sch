@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:samn_small-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -936,7 +935,7 @@ Wire Wire Line
 	8750 3900 9700 3900
 Connection ~ 8400 3850
 $Comp
-L MCU_Microchip_ATmega:ATmega328PB-AU U2
+L samn_7-rescue:ATmega328PB-AU-MCU_Microchip_ATmega U2
 U 1 1 5C1F8278
 P 7700 3650
 F 0 "U2" H 7700 2064 50  0000 C CNN

@@ -900,12 +900,12 @@ Connection ~ 10050 6100
 $Comp
 L Connector:AudioJack4 J1
 U 1 1 5D0A6ECD
-P 10000 3500
-F 0 "J1" H 9670 3383 50  0000 R CNN
-F 1 "AudioJack4" H 9670 3474 50  0000 R CNN
-F 2 "Connector_Audio:Jack_3.5mm_PJ320D_Horizontal" H 10000 3500 50  0001 C CNN
-F 3 "~" H 10000 3500 50  0001 C CNN
-	1    10000 3500
+P 10450 3300
+F 0 "J1" H 10120 3183 50  0000 R CNN
+F 1 "AudioJack4" H 10120 3274 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_PJ320D_Horizontal" H 10450 3300 50  0001 C CNN
+F 3 "~" H 10450 3300 50  0001 C CNN
+	1    10450 3300
 	-1   0    0    1   
 $EndComp
 $Comp

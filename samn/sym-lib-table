@@ -1,3 +1,5 @@
 (sym_lib_table
   (lib (name samn_small-rescue)(type Legacy)(uri ${KIPRJMOD}/samn_small-rescue.lib)(options "")(descr ""))
+  (lib (name samn_8-rescue)(type Legacy)(uri ${KIPRJMOD}/samn_8-rescue.lib)(options "")(descr ""))
+  (lib (name samn_7-rescue)(type Legacy)(uri ${KIPRJMOD}/samn_7-rescue.lib)(options "")(descr ""))
 )
